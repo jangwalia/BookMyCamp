@@ -1,4 +1,5 @@
 var express                  = require('express');
+var port                     = process.env.PORT || 3000;
 var flash                    = require('connect-flash');
 var bodyParser               = require('body-parser');
 var passport                 = require('passport');
@@ -49,6 +50,6 @@ app.use(indexRoutes);
 
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is working');
 })
