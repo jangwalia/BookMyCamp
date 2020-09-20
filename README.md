@@ -1,10 +1,5 @@
-<div align="center">
-  <h1> YelpCamp</h1>
-</div>
-
-<div align="center">
-  <h2>Homepage</h2>
-</div>
+## Yelpcamp 
+# Homepage
 ![image](Images/homepage.png)
 
 ## Initial Setup
