@@ -15,7 +15,7 @@
 
 - [x] Create our header and footer partials
 - [x] Add in Bootstrap
-![image](Images/bootsrap.png)
+![image](Images/bootstrap.png)
 
 ## Creating New Campgrounds
 
