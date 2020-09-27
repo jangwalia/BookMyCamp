@@ -40,7 +40,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.set('view engine','ejs');
 
-mongoose.connect(process.env.MONGODB_URI,'mongodb://localhost/Yelpcamp', {
+mongoose.connect(process.env.MONGODB_URI|| 'mongodb://localhost/Yelpcamp', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
