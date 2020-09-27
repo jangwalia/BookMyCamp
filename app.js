@@ -1,4 +1,5 @@
 
+require('dotenv').config();
 var express                  = require('express');
 var port                     = process.env.PORT || 3000;
 var flash                    = require('connect-flash');
@@ -39,7 +40,15 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.set('view engine','ejs');
 
-mongoose.connect('mongodb://localhost/Yelpcamp', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI,'mongodb://localhost/Yelpcamp', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+}).then(()=>{
+    console.log('connected to db');
+}).catch(err=>{
+    console.log(err.message);
+});
 
 
 //*****CALLING ALL THE ROUTES****
